@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css " />
+    <script src="./script.js" defer></script>
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"
+      data-auto-a11y="true"
+    ></script>
+    <link rel="shortcut icon" href="./images/sun.png" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <header>
+      <!-- SEARCH BAR -->
+      <form>
+        <div class="search">
+          <table>
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Search city"
+                  aria-label="Search for a city"
+                  id="input-data"
+                />
+              </td>
+              <td>
+                <a class="search-icon">
+                    <i class="fas fa-search"></i>
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </form>
+    </header>
+
+    <!-- DISPLAY WEATHER INFORMATION -->
+    <h1>Weather List <i class="fas fa-cloud-sun"></i></h1>
+    <div class="weather-cards-container" style="opacity: 1;">
+      <!-- <div class="display">
+        <p>31&deg;</p>
+      </div> -->
+    </div>
+
+    <!-- ERROR MODAL -->
+    <div id="error-modal-container">
+      <div class="error-modal" id="error-modal">
+        <div class="close-modal">x</div>
+        <div class="modal-info">
+          <span><i class="far fa-times-circle"></i></span>
+          <h2>Ooops!</h2>
+          <p>Your location could not be found.</p>
+          <button>Close</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <!-- TEMPERATURE SCALE BUTTON -->
+    <div class="scale-container">
+      <div class="scale-button-container">
+        <input type="checkbox" id="temperature-scale" />
+        <label for="temperature-scale" class="scale-button">
+          <div class="scale-toggle"></div>
+        </label>
+      </div>
+    </div>
+  </body>
+</html>
